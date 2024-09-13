@@ -63,7 +63,7 @@ function PlayGame(){
     }else if(humanScore < PCScore){
         alert("PC wins");
     }
-    
+    alert("F5 to play again")
 }
 
 }
