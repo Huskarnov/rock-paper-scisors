@@ -1,44 +1,41 @@
 let humanScore = 0;
-let PCScore =0;
+let PCScore = 0;
 let scoreH = document.querySelector('.score-h');
-let scoreC = document.querySelector('score-c');
+let scoreC = document.querySelector('.score-c');
 
 let insideWindow = document.querySelector('.inside-game-window');
 
-let newGameButton = document.querySelector('.new-game');
 let rockButton = document.querySelector('.rock');
 let paperButton = document.querySelector('.paper');
 let scisorsButton = document.querySelector('.scisors');
 
- 
 
 
-newGameButton.addEventListener("click", function(){
-    newGameButton.setAttribute("style", "display:none");
-    insideWindow.removeAttribute("id");
-    insideWindow.classList.add("inside-game-window");
 
 
+rockButton.addEventListener("click", function(){
+    PlayGame('rock');
+});
+paperButton.addEventListener("click", function(){
+    PlayGame('paper');
+});
+scisorsButton.addEventListener("click", function(){
+    PlayGame('scisors');
 });
 
-rockButton.addEventListener("click", PlayGame("rock"));
-paperButton.addEventListener("click", PlayGame("paper"));
-scisorsButton.addEventListener("click", PlayGame("scisors"));
 
-
-function PlayGame(choice){
+function PlayGame(choiceRPC){
     
-    if(!PCScore === 5 || !humanScore === 5){
-    let humanChoice = choice; 
+    if(PCScore < 5 && humanScore < 5){
 
-    if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scisors" ){
+    let humanChoice = choiceRPC; 
 
         let rdm =Math.random() * 100;
         let pcChoice;
         let choice =    rdm < 33.33?                    pcChoice = "rock":
                         rdm > 33.33 && rdm < 66.66 ?    pcChoice = "paper" :
                                                         pcChoice = "scisors";
-
+    
                     if(humanChoice === pcChoice){
                     }else if(humanChoice === "rock" && pcChoice === "paper"){
                         PCScore++;
@@ -53,11 +50,14 @@ function PlayGame(choice){
                     }else if ((humanChoice === "scisors" && pcChoice === "paper")){
                         humanScore++;
                     }
-        }
+    
         
-    scoreH.textContent = humanScore;
-    scoreC.textContent = PCScore;
+    
+        
+       
     }
 
+    scoreC.textContent = `${PCScore}`;
+    scoreH.textContent = `${humanScore}`;
 }
 
