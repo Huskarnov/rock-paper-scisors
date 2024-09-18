@@ -6,20 +6,20 @@
 }
 
 @font-face {
-    font-family: "Monserrat";
-    src: url("fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+    font-family: "bubbly";
+    src: url("fonts/bubbly.TTF");
 }
+
 body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Monserrat";
+    font-family: "bubbly";
 }
 
 section{
     height: 100vh;
-  
- }   
+}   
 header{
     display: flex;
     align-items: center;
@@ -33,7 +33,7 @@ header{
 
     height: 15% ;
 
-    background-image: linear-gradient(#00fff727 , #b772035e );
+    background-image: linear-gradient(#00fff727 , #e1351e46 );
     
 }
 .game-space{
@@ -45,7 +45,7 @@ header{
 
     height: 85%;
 
-    background-image: linear-gradient(#b772035e, #033735be);
+    background-image: linear-gradient(#e1351e46, #02302ede);
 }
 .game-window{
     display: flex;
@@ -53,19 +53,17 @@ header{
     align-items: center;
     flex-direction: column;
 
-    background-color: rgba(0, 255, 255, 0.237);
+    background-color: #db5c4b3c;
     
     border-radius: 15px;
-    border: 5px double white;
+    border: 5px inset #db6f60;
 
     height: 20rem;
     width: 20rem;
     
 }
 
-/* #inside-game-window{
-    display: none;
-} */
+
 
 .inside-game-window{
     animation: fadein 0.3s ease-in-out forwards;
@@ -84,6 +82,7 @@ header{
     align-items: center;
     flex-direction: row;
     gap: 70px;
+
  
 }
 .score-card{
@@ -92,38 +91,50 @@ header{
     justify-content: center;
 
     flex-direction: column; 
-    border: 5px double white;
+    border: 5px inset #544b4b81;
     border-radius: 15px;
     width: 5rem;
+   
 
     padding: 10px 10px;
     gap: 25px;
 
     font-weight: 800;
+    font-size: 0.8rem;
+    color: #bd210dd3;
+
+    background-color: #00fff727;
+    ;
 }
 .score{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4rem;
-    background-color: white;
-    border-radius: 5px;
+    background-color: #d3dedd5e;
+    border-radius: 10px;
+
+    border: 5px inset #544b4b81;
+
+    
 
 }
 
 
 .game-interface{
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 80px;
+    
 }
 
 .game-interface button{
     font-family: 'googleIcons';
     font-size: 2rem;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.099);
+    font-weight: 900;
+    color: #bd210dd3;
+    background-color: #00fff727;
 
     display: flex;
     align-items: center;
